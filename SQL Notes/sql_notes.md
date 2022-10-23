@@ -526,6 +526,14 @@ WHERE payment_date IS NOT NULL
 
 - Aggregate Functions:
 
+Note: When calling a function, the collumn name is changed into the Function Name.
+To remove this limitation, use the AS keyword.
+The example below, show the use of coalese function.
+```sql
+SELECT coalesce (<column>,'Empty') AS column_alias
+FROM <Table>
+```
+
   - MAX()
   - MIN()
   - AVG()
@@ -923,6 +931,8 @@ WHERE payment_date IS NOT NULL
   ```
 
 - IFNULL and COALESCE Functions
+  
+The SQL server's Coalesce function is used to handle the Null values. The null values are replaced with user-defined values during the expression evaluation process. This function evaluates arguments in a particular order from the provided arguments list and always returns the first non-null value.
 
   ```sql
   SELECT order_id,
