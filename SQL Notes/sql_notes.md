@@ -906,6 +906,8 @@ FROM <Table>
 
   SELECT EXTRACT(DAY FROM NOW()) -- use this standard SQL Function
 
+  SELECT TO_CHAR(expression, format) -- Converts a timestamp to a  string.
+
   ```
 
 - Formatting Dates and Time
