@@ -210,7 +210,16 @@ USE database_name;
       ```
 
 - FROM MULTIPLE TABLE:
+   (INNER) JOIN: Returns records that have matching values in both tables
 
+    LEFT (OUTER) JOIN: Returns all records from the left table, and the matched records from the right table
+
+    RIGHT (OUTER) JOIN: Returns all records from the right table, and the matched records from the left table
+
+    FULL (OUTER) JOIN: Returns all records when there is a match in either left or right table
+
+
+  ![alt text for screen readers](C:\Users\AmarenPillayIyavoo\Documents\GitHub\SQL-Notes\SQL Notes\Diagrams "Text to show on mouseover")
   - INNER JOIN/JOIN Clause:
 
     - Use to join two tables to extract data residing in the two table but are linked somehow

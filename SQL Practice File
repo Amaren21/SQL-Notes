@@ -1,0 +1,20 @@
+-- Inner JOIN with 2 Tables
+
+SELECt employees.emp_no, CONCAT (employees.first_name, employees.last_name), salaries.salary
+FROM employees
+INNER JOIN salaries ON salaries.emp_no = employees.emp_no
+ORDER BY employees.emp_no ASC;
+
+
+-- 
+SELECt employees.emp_no, CONCAT (employees.first_name, employees.last_name), salaries.salary
+FROM employees
+INNER JOIN salaries ON employees.emp_no = salaries.emp_no
+ORDER BY employees.emp_no ASC;
+
+SELECt employees.emp_no, CONCAT (employees.first_name, employees.last_name), salaries.salary As "Promotion salary",titles.title, titles.from_date AS "Promoted On "
+FROM employees
+INNER JOIN salaries ON salaries.emp_no = employees.emp_no
+INNER JOIN titles ON titles.emp_no = employees.emp_no 
+AND (titles.from_date = salaries.from_date OR titles.from_date = salaries.from_date + INTERVAL '2 Days')
+ORDER BY employees.emp_no ASC, titles.from_date ASC;
